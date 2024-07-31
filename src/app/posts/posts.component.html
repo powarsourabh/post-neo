@@ -1,0 +1,74 @@
+
+
+   <!-- <div id="postContainer" class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let post of pginatedposts">
+            <h5>{{ post.userId }}</h5>
+            <h5>{{ post.id }}</h5>
+            <h5>{{ post.title }}</h5>
+            <p>{{ post.body }}</p>
+          </li>
+        </ul>
+  
+        <nav aria-label="Page navigation" class="mt-3">
+          <ul class="pagination justify-content-center">
+            <li class="page-item" [class.disabled]="currentpage === 1">
+              <button class="page-link" (click)="prevpage()">Previous</button>
+            </li>
+            <li class="page-item disabled">
+              <span class="page-link">Page {{ currentpage }}</span>
+            </li>
+            <li class="page-item" [class.disabled]="currentpage * postperpage >= posts.length">
+              <button class="page-link" (click)="nextPage()">Next</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+   -->
+
+   <div id="postContainer" class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <ul class="list-group">
+          <!-- Row Headings -->
+          <li class="list-group-item active">
+            <div class="row">
+              <div class="col-1">User ID</div>
+              <div class="col-1">ID</div>
+              <div class="col-4">Title</div>
+              <div class="col-6">Description</div>
+            </div>
+          </li>
+  
+          <!-- List Items -->
+          <li class="list-group-item" *ngFor="let post of pginatedposts">
+            <div class="row">
+              <div class="col-1">{{ post.userId }}</div>
+              <div class="col-1">{{ post.id }}</div>
+              <div class="col-4">{{ post.title }}</div>
+              <div class="col-6">{{ post.body }}</div>
+            </div>
+          </li>
+        </ul>
+  
+        <nav aria-label="Page navigation" class="mt-3">
+          <ul class="pagination justify-content-center">
+            <li class="page-item" [class.disabled]="currentpage === 1">
+              <button class="page-link" (click)="prevPage()">Previous</button>
+            </li>
+            <li class="page-item disabled">
+              <span class="page-link">Page {{ currentpage }}</span>
+            </li>
+            <li class="page-item" [class.disabled]="currentpage * postperpage >= posts.length">
+              <button class="page-link" (click)="nextPage()">Next</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  
